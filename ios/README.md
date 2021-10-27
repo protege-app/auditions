@@ -16,13 +16,8 @@ This project should take between 1-2 hours to complete. Please stay within that 
 	- Load the thumbnail from the video link
 	- Display a formatted launch date
 - Launches should be sorted by the most recent launch date
-- Provide a way for users to view each launch's `video_link`, `article_link`, and `wikipedia` link in a web view controller
-
-**Optional extra credit**
-
+- Provide a way for users to view each launch's `video_link`, `article_link`, and `wikipedia` link
 - Add pagination to the `launchesPast` query and load more launches using the `offset` variable
-- Add a persistence layer that caches the SpaceX launches so that the view controller loads immediately upon subsequent app launches
-
 
 ## Resources
 
@@ -30,11 +25,9 @@ This project should take between 1-2 hours to complete. Please stay within that 
 
 Please use the [SpaceX GraphQL API](https://api.spacex.land/graphql/) for downloading the list of past launches.
 
-
-
 ```
 query {
-  launchesPast(limit: 10) {
+  launchesPast(limit: 10, offset: 0) {
     launch_date_local
     launch_site {
       site_name_long
