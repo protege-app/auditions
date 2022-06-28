@@ -1,52 +1,20 @@
-# Protégé iOS Interview Project
+# Protégé Take Home Project
 
-## Problem
+<center><img src="ProtegeTakeHome/Preview Content/Preview Assets.xcassets/Wireframe.imageset/Wireframe.png" alt="Wireframe" width="375" height="812"></center>
 
-Your task is to create an app that fetches and displays a list of past SpaceX rocket launches. Users should be able to watch videos of the launches and read news/wikipedia articles.
+### Your task is to build a chat app that fetches and displays a list of messages
 
-This project should take between 1-2 hours to complete. Please stay within that time frame.
+Thanks for applying to Protégé! The goal of this project is to show us how you like to build complex user interfaces from scratch. You should create abstractions that are simple, but flexible enough that they allow for different types of messages to be added in the future. For example, the app might need to support photo or video previews in the next app release.
 
-**Requirements**
+Features your app should have:
 
-- Fetch past SpaceX launches using the `launchesPast` query from the [SpaceX GraphQL API](https://api.spacex.land/graphql/) and display the launches in a list
-- Each launch should display:
-	- Mission name
-	- Launch site name
-	- Load the mission patch image
-	- Load the thumbnail from the video link
-	- Display a formatted launch date
-- Launches should be sorted by the most recent launch date
-- Provide a way for users to view each launch's `video_link`, `article_link`, and `wikipedia` link
-- Add pagination to the `launchesPast` query and load more launches using the `offset` variable
+* Display the name of the person you're chatting with in the nav bar
+* Fetch and display messages from oldest to newest using the provided `MockChatAPI` class
+* Support pagination for loading older messages as you scroll up
+* Display a date label in the chat transcript whenever less than an hour has passed between messages
+* Ability to add new messages to the chat using the keyboard
 
-## Resources
+Requirements:
 
-### SpaceX GraphQL API
-
-Please use the [SpaceX GraphQL API](https://api.spacex.land/graphql/) for downloading the list of past launches.
-
-```
-query {
-  launchesPast(limit: 10, offset: 0) {
-    launch_date_local
-    launch_site {
-      site_name_long
-    }
-    links {
-      article_link
-      video_link
-      mission_patch_small
-      wikipedia
-    }
-    mission_name
-  }
-}
-```
-
-### Loading Thumbnails from YouTube
-
-To load thumbnails from the launch's `video_link` you'll need to extract the YouTube video ID and request the image with the following URL:
-
-```
-https://img.youtube.com/vi/<insert-youtube-video-id>/maxresdefault.jpg
-```
+* The app should build and run on Xcode 13+ with no errors or warnings
+* Any external dependencies should be installed using Swift Package Manager
