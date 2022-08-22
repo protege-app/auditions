@@ -11,7 +11,7 @@ Features your app should have:
 * Display the name of the person you're chatting with in the nav bar
 * Fetch and display messages from oldest to newest using the provided `MockChatAPI` class
 * Support pagination for loading older messages as you scroll up
-* Display a date label in the chat transcript whenever less than an hour has passed between messages
+* Display a date label in the chat transcript whenever more than an hour has passed between messages
 * Ability to add new messages to the chat using the keyboard
 
 Requirements:
