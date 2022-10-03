@@ -9,7 +9,10 @@ import Foundation
 final class MockChatAPI: ChatAPI {
     
     func fetchMessages(for chat: Chat, interval: DateInterval) async throws -> [Message] {
-        let delay = UInt64.random(in: 0..<2)
+        let delay = UInt64.random(in: 0...3)
+        if delay == 3 {
+            throw ChatAPIError.timedOut
+        }
         try await Task.sleep(nanoseconds: 1_000_000_000 * delay)
         let messages = Message.generateFakeMessages(startDate: interval.start,
                                                     endDate: interval.end,

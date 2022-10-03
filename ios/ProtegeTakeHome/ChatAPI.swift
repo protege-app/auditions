@@ -5,6 +5,15 @@
 
 import Foundation
 
+/// The enum representing chat API errors.
+enum ChatAPIError: LocalizedError {
+    case timedOut
+    
+    var errorDescription: String? {
+        "Sorry, the app had an issue loading the network request."
+    }
+}
+
 /// A protocol that represents an interface to a remote chat API.
 protocol ChatAPI {
     /// Returns an array of messages for a given chat and date interval.
