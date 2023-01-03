@@ -35,6 +35,18 @@ struct Chat: Identifiable, Equatable, Hashable {
     static let liaAndChristina = Chat(primarySender: .lia, secondarySender: .christina)
 }
 
+extension Chat {
+    var displayTitle: String {
+        if let firstName = secondarySender.name.givenName {
+            if let lastName = secondarySender.name.familyName {
+                return firstName + " " + lastName
+            }
+            return firstName
+        }
+        return secondarySender.name.familyName ?? ""
+    }
+}
+
 /// A response from the API that represents a single message.
 struct Message: Identifiable, Equatable, Hashable {
     let id = UUID()

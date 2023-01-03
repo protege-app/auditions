@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169870CF295E3618007D1715 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169870CE295E3618007D1715 /* ChatViewModel.swift */; };
+		169870D1295E3A2E007D1715 /* ChatListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169870D0295E3A2E007D1715 /* ChatListRowView.swift */; };
+		169870D3295E3E6C007D1715 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169870D2295E3E6C007D1715 /* ConversationView.swift */; };
+		169870D7295E56B7007D1715 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169870D6295E56B7007D1715 /* ConversationViewModel.swift */; };
+		169870D9295E618C007D1715 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169870D8295E618C007D1715 /* Extensions.swift */; };
+		169870DB2964B827007D1715 /* TextBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169870DA2964B827007D1715 /* TextBubbleView.swift */; };
 		BC1885732864DF39004CF02F /* ProtegeTakeHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1885722864DF39004CF02F /* ProtegeTakeHomeApp.swift */; };
-		BC1885752864DF39004CF02F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1885742864DF39004CF02F /* ContentView.swift */; };
+		BC1885752864DF39004CF02F /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1885742864DF39004CF02F /* ChatsListView.swift */; };
 		BC1885772864DF3A004CF02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1885762864DF3A004CF02F /* Assets.xcassets */; };
 		BC18857A2864DF3A004CF02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1885792864DF3A004CF02F /* Preview Assets.xcassets */; };
 		BC1885812864DF84004CF02F /* ChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1885802864DF84004CF02F /* ChatAPI.swift */; };
@@ -17,9 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		169870CE295E3618007D1715 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		169870D0295E3A2E007D1715 /* ChatListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRowView.swift; sourceTree = "<group>"; };
+		169870D2295E3E6C007D1715 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		169870D6295E56B7007D1715 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		169870D8295E618C007D1715 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		169870DA2964B827007D1715 /* TextBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBubbleView.swift; sourceTree = "<group>"; };
 		BC18856F2864DF39004CF02F /* ProtegeTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtegeTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1885722864DF39004CF02F /* ProtegeTakeHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegeTakeHomeApp.swift; sourceTree = "<group>"; };
-		BC1885742864DF39004CF02F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BC1885742864DF39004CF02F /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		BC1885762864DF3A004CF02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1885792864DF3A004CF02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC1885802864DF84004CF02F /* ChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPI.swift; sourceTree = "<group>"; };
@@ -59,11 +71,17 @@
 			isa = PBXGroup;
 			children = (
 				BC1885722864DF39004CF02F /* ProtegeTakeHomeApp.swift */,
-				BC1885742864DF39004CF02F /* ContentView.swift */,
+				BC1885742864DF39004CF02F /* ChatsListView.swift */,
+				169870D2295E3E6C007D1715 /* ConversationView.swift */,
+				169870D0295E3A2E007D1715 /* ChatListRowView.swift */,
 				BC1885802864DF84004CF02F /* ChatAPI.swift */,
 				BC1885822864DFB9004CF02F /* MockChatAPI.swift */,
 				BC1885762864DF3A004CF02F /* Assets.xcassets */,
 				BC1885782864DF3A004CF02F /* Preview Content */,
+				169870CE295E3618007D1715 /* ChatViewModel.swift */,
+				169870D6295E56B7007D1715 /* ConversationViewModel.swift */,
+				169870D8295E618C007D1715 /* Extensions.swift */,
+				169870DA2964B827007D1715 /* TextBubbleView.swift */,
 			);
 			path = ProtegeTakeHome;
 			sourceTree = "<group>";
@@ -152,9 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169870D3295E3E6C007D1715 /* ConversationView.swift in Sources */,
+				169870D9295E618C007D1715 /* Extensions.swift in Sources */,
 				BC1885812864DF84004CF02F /* ChatAPI.swift in Sources */,
 				BC1885832864DFB9004CF02F /* MockChatAPI.swift in Sources */,
-				BC1885752864DF39004CF02F /* ContentView.swift in Sources */,
+				BC1885752864DF39004CF02F /* ChatsListView.swift in Sources */,
+				169870D1295E3A2E007D1715 /* ChatListRowView.swift in Sources */,
+				169870D7295E56B7007D1715 /* ConversationViewModel.swift in Sources */,
+				169870DB2964B827007D1715 /* TextBubbleView.swift in Sources */,
+				169870CF295E3618007D1715 /* ChatViewModel.swift in Sources */,
 				BC1885732864DF39004CF02F /* ProtegeTakeHomeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
